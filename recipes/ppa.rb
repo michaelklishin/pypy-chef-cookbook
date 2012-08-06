@@ -20,8 +20,6 @@
 # This recipe relies on a PPA package and is Ubuntu/Debian specific. Please
 # keep this in mind.
 
-include_recipe "apt"
-
 apt_repository "pypy" do
   uri          "http://ppa.launchpad.net/pypy/ppa/ubuntu"
   distribution node['lsb']['codename']
@@ -33,5 +31,9 @@ apt_repository "pypy" do
 end
 
 package "pypy" do
+  action :install
+end
+
+package "pypy-dev" do
   action :install
 end
