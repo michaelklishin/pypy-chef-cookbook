@@ -7,7 +7,7 @@ It uses official tarballs or [PyPy Team Ubuntu PPA](https://launchpad.net/~pypy/
 
 ## PyPy Version
 
-`pypy::tarball` provides 1.9 by default with an option to change the version via node attributes.
+`pypy::tarball` provides 2.0 by default with an option to change the version via node attributes.
 
 For the PPA flavor, this cookbook currently provides PyPy 1.8.x but as new releases are pushed to the PPA, they will be used instead.
 
@@ -16,7 +16,7 @@ For the PPA flavor, this cookbook currently provides PyPy 1.8.x but as new relea
 
 Ubuntu 10.04, 11.04, 11.10 for `pypy::ppa`.
 
-Ubuntu 10.04, 11.04, 11.10, 12.04 and any recent Debian release for `pypy::tarball`.
+Ubuntu 10.04 to 13.04 and any recent Debian release for `pypy::tarball`.
 
 
 ## Recipes
@@ -28,7 +28,7 @@ Main recipe is `pypy::tarball`. There is also Main recipe is `pypy::ppa` that us
 
 For `pypy::tarball`:
 
- * `node[:pypy][:tarball][:version]` (default: `"1.9"`): PyPy version to install
+ * `node[:pypy][:tarball][:version]` (default: `"2.0"`): PyPy version to install
  * `node[:pypy][:tarball][:installation_dir]` (default: `"/usr/local/pypy"`): where to install PyPy
 
 There are no attributes to tune at the moment for `pypy::ppa`.
